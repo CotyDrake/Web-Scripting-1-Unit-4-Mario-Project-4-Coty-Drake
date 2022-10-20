@@ -1,29 +1,16 @@
-
-let heightOfPyramid;
-heightOfPyramid = prompt("How tall would you like your pyramid?")
-// TODO #2
-// Take in user input for the height
-
-
-/*
- * printPyramid
- *
- * Prints to the console a pyramid of '#' characters of the specified height
- * For example, if height is 5, the console will look like this:
- *          ##
- *         ###
- *        ####
- *       #####
- *      ######
- */
-function createPyramid(rows)
-{
-    for (let i = 0; i < rows; i++) {
-        var output = '';
-        for (let j =0; j < rows - i; j++) output += '  ';
-        for (let k = 0; k <= i; k++) output += '##';
-        console.log(output);  
-    } 
+let n;
+n = prompt("How big do you want your pyramid to be?")
+// you can take input from prompt or change the value
+let string = "";
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 0; j < n - i; j++) {
+    string +="  ";
+  }
+  // printing star
+  for (let k = 0; k < i; k++) {
+    string += "**";
+  }
+  string += "<br>";
 }
-
-createPyramid(heightOfPyramid) // pass number as row of pyramid you want
+document.write(`<pre>${string}</pre>`);
