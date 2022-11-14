@@ -1,11 +1,11 @@
-let n;
-n = prompt("How big do you want your pyramid to be?")
-// you can take input from prompt or change the value
-let string = "";
-for (let i = 1; i <= n; i++) {
+function myFunction() {
+ var x = document.getElementById("myText").value;
+ 
+ let string = "";
+ for (let i = 1; i <= x; i++) {
   // printing spaces
-  for (let j = 0; j < n - i; j++) {
-    string +="  ";
+  for (let j = 0; j < x - i; j++) {
+    string +="";
   }
   // printing star
   for (let k = 0; k < i; k++) {
@@ -13,4 +13,6 @@ for (let i = 1; i <= n; i++) {
   }
   string += "<br>";
 }
-document.write(`<pre>${string}</pre>`);
+ document.getElementById("pyramid").innerHTML = string;
+};
+
